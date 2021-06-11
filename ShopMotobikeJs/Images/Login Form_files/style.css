@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#center{
+    width: 253px;
+    height: 160px;
+    margin: -375px auto;
+    margin-top: 200px;
+    color: black;
+}
+.item{
+    color: black;
+    background: rgba(233, 30, 99, 0.18);
+    height: 680px;
+    width: 1350px;
+}
+#container{
+    margin-top: -50px;
+    color: #000000;
+    font-size: larger;
+}
+#container1{
+    margin-top: -50px;
+    color: #000000;
+    font-size: larger;
+}
+#picture{
+    margin-left: -1300px;
+}
+#visual{
+    text-align: center;
+    margin: -40px;
+}
+#social{
+    width: 630px;
+    margin: 110px;
+    color: black;
+    font-size: large;
+}
+#icon{
+	position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+#info{
+    width: 1100px;
+    text-align: center;
+    margin: 127px;
+    font-size: xxx-large;
+    color: red;
+}
+#Login{
+    width: 61px;
+
+}
+#form{
+    width: 250px;
+    margin: 1px auto;
+    margin-top: 211px;
+    text-align: center;
+}
+#tabList{
+    text-align: center;
+    width: 670px;
+    height: 50px;
+    margin: 50px;
+    font-size: larger;
+}
+#tableInfo{
+    margin: 95px auto;
+    text-align: center;
+    height: 150px;
+    width: 1200px;
+    color: rgb(117, 0, 92);
+}
+#Logout{
+    position: absolute;
+    right: 75px;
+    color: #d44e00;
+    background: aqua;
+}
+#bHead{
+    width: 550px;
+    text-align: center;
+    margin: 195px;
+    font-size: xxx-large;
+    color: red;
+}
+
+.bgr
+{
+    background-image: url(http://3.bp.blogspot.com/-IzYETuZ48C8/T7MQmHucwCI/AAAAAAAABEQ/jBTkIk7ObKY/s1600/hinh-nen-dep-31.jpg);
+}
+
