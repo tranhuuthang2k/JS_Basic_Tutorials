@@ -1,0 +1,54 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#slider
+{
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+    
+}
+#slider >div
+{
+    width: 4000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.5s ease-in;
+    display: inline-table;
+}
+#slider >div > img
+{
+    width: 500px;
+    height: 500px;
+    border: 1px solid green;
+    display: inline-block;
+   
+}
+#indicators div
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50% ;
+    border: 1px solid #ebebeb;
+    display: inline-block;
+    margin: 0px auto;
+}
+
+#indicators div:first-child
+{
+    background: red;
+}
+
+#total
+{
+    width: 500px;
+    /* height: 500px; */
+    margin: 0px auto;
+}

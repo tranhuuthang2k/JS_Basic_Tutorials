@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dark Mode</title>
+</head>
+<body >
+    <div>
+        <label for="chooseColor">Choose a color:</label>
+        <select id="colors" onchange="darkMode()">
+        </select> 
+        <input style="display: none;" type="text" id="nameColor" value="" placeholder="nhập màu muốn thêm">
+        <button style="display: none;" id="sumbit" onclick="sumbit()">ok</button>
+        <input type="checkbox" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+            <i class="fa fa-moon-o"></i>
+            <i class="fa fa-sun-o"></i>
+            <div class="ball"></div>
+        </label>
+        <div id="result"></div>
+    </div>
+</body>
+<script type="text/javascript">
+let colorDefaut = `<option value="Addcolor">Add color</option>
+       <option value="#292C35">Dark</option>
+        <option value="Black">Black</option>
+        <option value="Pink">Pink</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Orange">orange</option>
+        `
+if(!localStorage.getItem('element')  )
+{
+  document.getElementById('colors').innerHTML =  colorDefaut ; // khởi tạo màu mặc định
+}
+else{
+  document.getElementById('colors').innerHTML = localStorage.getItem('element') // in ra sự lựa chọn màu
+
+}
+
+function sumbit()
+{
+  let colorname = document.getElementById('nameColor').value;
+  var x = document.createElement("OPTION");
+  x.setAttribute("value", colorname);
+  var t = document.createTextNode(colorname);
+  x.appendChild(t); // thêm nội dung vào thẻ
+  let element = document.getElementById("colors").appendChild(x)
+  
+  let elemenAdd =  document.getElementById('colors').innerHTML +=  `<option value="${colorname}">${colorname}</option>` -1  ;
+        localStorage.setItem('element',elemenAdd);
+        localStorage.getItem('element')  
+        document.getElementById('colors').innerHTML =  localStorage.getItem('element');
+        alert('thêm màu vào option thành công');
+        document.getElementById('nameColor').style.display ='none';
+      document.getElementById('sumbit').style.display ='none';
+
+}
+ 
+
+
+
+
+    
+let darkStorage = localStorage.getItem('darkmode');
+let themeColorStorage = localStorage.getItem('themecolor');
+document.getElementById('colors').value = themeColorStorage
+let dark = document.getElementById('chk');
+  function darkMode() // màu tối
+  {
+
+    let colorValue =document.getElementById('colors').value;
+    if(colorValue =='Addcolor')
+    {
+      document.getElementById('nameColor').style.display ='block';
+      document.getElementById('sumbit').style.display ='block';
+
+    }
+    else
+    {
+      document.getElementById('nameColor').style.display ='none';
+      document.getElementById('sumbit').style.display ='none';
+    }
+    localStorage.setItem('darkmode','on');
+    document.body.style.backgroundColor = colorValue;
+    localStorage.setItem('themecolor',colorValue);
+    document.getElementsByClassName("ball")[0].style.transform = "translateX(24px)"; 
+  }
+  
+  function LightMode() // màu sáng
+  {
+    localStorage.setItem('darkmode','off');
+    themeColorStorage = localStorage.getItem('themecolor');
+    document.getElementsByClassName("ball")[0].style.transform = "translateX(0px)";
+    document.body.style.backgroundColor = 'white';
+  }
+   
+   if ( darkStorage == 'on') //   nếu  người dùng bật
+   {
+      darkMode();
+     
+   }
+   else if (!localStorage.getItem('themecolor') && !localStorage.getItem('darkmode') ) // chưa có thì set màu mặc định của web
+   {
+
+    localStorage.setItem('themecolor','#292C35');
+    document.getElementById('colors').value ='#292C35';
+   }
+   else // ngược lại nếu là off
+   {
+    LightMode();
+   }
+  
+    dark.addEventListener('click', ()=>{   // nếu người dùng click vào button 
+      darkStorage = localStorage.getItem('darkmode');
+      themeColorStorage = localStorage.getItem('themecolor');
+      
+       if (darkStorage !== 'on') //off
+       {
+          darkMode();
+       }
+       else{ //on
+          LightMode();
+       }
+    })
+</script>
+</html>
