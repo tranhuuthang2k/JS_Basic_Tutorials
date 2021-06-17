@@ -1,1 +1,1 @@
-# JS Basic DOM tutorials by MrKatsu
+# JS Basic DOM tutorials by MrKatsu(Tran Huu Thang)
