@@ -11,7 +11,6 @@ body {
 
 h1 {
   color: #ffffff;
-  text-transform: uppercase;
   font-weight: 800;
 }
 
@@ -21,15 +20,19 @@ p {
 
 #first {
   margin-top: 10px;
-  color: #ffcd5d;
+  color: #e4dbc8;
 }
 
 #second {
-  color: #51df70;
+  color: #130f40;
 }
 
 #third {
-  color: #025f70;
+  color: #130f40;
+  margin-bottom: 30px;
+}
+#four {
+  color: #130f40;
   margin-bottom: 30px;
 }
 
@@ -61,7 +64,7 @@ li {
   list-style: none;
   padding: 10px 20px;
   color: #ffffff;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-weight: 600;
   border: 2px solid #025f70;
   border-radius: 5px;
