@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+   <title>To Do List</title>
+</head>
+<body >
+   <div class="container">
+		<div class="row">
+			<div class="intro col-12">
+				<h1>Quản Lý Sinh Viên - Trần Hữu Thắng</h1>
+				<div>
+					<div class="border1"></div>
+					<div ></div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="form-group">
+			  <label for="code">Mã sinh viên</label>
+			  <input type="code" class="form-control" id="masv" aria-describedby="emailHelp" placeholder="Nhập mã sinh viên">
+			  <span id="errorCode" style="color: #af1818; font-weight: 700;"></span>
+			</div>
+			<div class="form-group">
+			  <label for="userName">Tên sinh viên</label>
+			  <input type="userName" class="form-control" id="userName" placeholder="Nhập tên sinh viên">
+			  <span id="errorName" style="color: #af1818; font-weight: 700;"></span>
+			</div>
+			<div class="form-group">
+				<label for="address">Địa chỉ</label>
+				<input type="address" class="form-control" id="address" placeholder="Nhập địa chỉ">
+				<span id="errorAddress" style="color: #af1818; font-weight: 700;"></span>
+			 </div>
+			 <div class="form-group">
+				<label for="phone">SĐT</label>
+				<input type="number" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+				<span id="errorPhone" style="color: #af1818; font-weight: 700;"></span>
+			 </div>
+			<button type="submit" class="btn btn-success" style="display: block; margin: 0 auto;" id="submit">Create</button>
+		 </div>
+
+		<!-- Empty List -->
+		<div class="row" id="list" style="margin-top: 10px;">
+			<div class="listItems col-12" id="list_students">
+				<table id="table_list" style="width:100%" class="table table-bordered"></table>
+		</div>
+	</div>
+	<script type="text/javascript" src="js.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>

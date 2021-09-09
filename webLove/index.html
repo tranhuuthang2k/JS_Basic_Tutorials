@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      
+      .button2 {background-color: #008CBA;} /* Blue */
+      .button3 {background-color: #f44336;} /* Red */ 
+      .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+      .button5 {background-color: #555555;} /* Black */
+      </style>
+</head>
+<body>
+   <h1>Làm Người Yêu Anh Nhé</h1>
+   <p>Nếu Thoát ra là ĐỒNG Ý ❤️</p>
+   <div style="display: flex;">
+      <button class="button" onclick="argee()">Có</button>
+      <button class="button button2" onmousemove="move()" id="no" style="position: absolute; 
+      left: 7%; ; cursor: pointer;">Không</button>
+   </div>
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTer_0Gu19duU4jjoEekr_99Iib8Nk0SMe_oz0gljYerdL1Q5E&s" alt="">
+</body>
+<script>
+    function argee ()
+    {
+       alert("Anh Cũng Yêu em ❤️ ")
+    }
+    function move()
+    {
+       let x = Math.random()*500;
+       let y = Math.random()*500;
+       let z = Math.random()*500;
+       let left = x+ "px";
+       let top =  y+ "px";
+      document.getElementById("no").style.left=left
+      document.getElementById("no").style.top=top
+
+    }
+</script>
+</html>

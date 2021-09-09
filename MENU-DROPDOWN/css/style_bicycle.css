@@ -1,0 +1,448 @@
+/* setting basic css */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+button,
+textarea,
+input {
+  outline: none;
+  font-family: "Lato", sans-serif;
+}
+button {
+  cursor: pointer;
+}
+:root {
+  --primary-color: #64c29e;
+  --bg-light: #f7f7f7;
+  --bg-white: #ffffff;
+  --bg-dark: #282f35;
+  --text-color: #848789;
+}
+/* end basic setting */
+.wrapper {
+  max-width: 160rem;
+  margin: 0 auto;
+}
+.header {
+  min-height: 80rem;
+  background-image: url("../img/header-image.jpg");
+  background-position: center center;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  margin-top: 3.5rem;
+}
+.nav_list {
+  display: flex;
+  align-items: center;
+}
+.nav_item {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  position: relative;
+}
+.nav_item:first-child::after,
+.nav_item:nth-child(4)::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: ".";
+  font-size: 2rem;
+}
+.nav_link {
+  font-size: 1.3rem;
+  color: #4d4959;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* end header */
+/* begin feature */
+.feature {
+  /* max-height: 46.9rem; */
+  background: var(--bg-light);
+}
+.feauture_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.feauture_box > img {
+  height: 5.5rem;
+  width: 5.5rem;
+  margin-top: 11.5rem;
+}
+.feauture_content {
+  max-width: 108rem;
+  margin-top: 1.5rem;
+}
+.feauture_title {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.feauture_des {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 14rem;
+  color: var(--text-color);
+}
+/*****Feature*********/
+.feature_bg {
+  max-height: 180rem;
+}
+.feature_list {
+  max-height: 60rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.feature_item--Left {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.brand_icon {
+  position: absolute;
+  top: 23.6rem;
+}
+
+.feature_item--right {
+  /* max-width: 53.3rem; */
+  margin-top: 7.2rem;
+}
+.feature_item_content {
+  text-align: center;
+}
+.feaute_item--top {
+  margin-bottom: 3.1rem;
+  align-items: center;
+}
+.feature_title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding-bottom: 2.8rem;
+  text-align: center;
+}
+
+.feature_des {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  text-align: justify;
+  padding-left: 7rem;
+  /* width: 47rem; */
+  padding-right: 6rem;
+  position: relative;
+}
+.feature_des::before {
+  content: "";
+  position: absolute;
+  top: 129%;
+  border-top: 1px solid #d7d7d7;
+  left: 45%;
+  width: 5.1rem;
+}
+.feaute_item--bottom {
+  margin-top: 8.5rem;
+}
+.feature_triangle {
+  position: relative;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-width: 0 0.9rem 0.9rem 0.9rem;
+  border-color: transparent transparent #fff transparent;
+  border-style: solid;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 8.3rem;
+  left: 25.8rem;
+  align-items: center;
+}
+/* End feature */
+/* Begin introduce shop */
+.main {
+  min-height: 46.9rem;
+  background-color: var(--bg-light);
+  text-align: center;
+  padding-top: 12.1rem;
+}
+i:nth-of-type(1) {
+  color: #56c7ee;
+  font-size: 3rem;
+}
+i:nth-child(1):before {
+  display: block;
+  /* background: #78cdf0; */
+  color: #78cdf0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+.main_title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-top: 3.8rem;
+  padding-bottom: 2.5rem;
+}
+.main_title > span {
+  color: var(--text-color);
+}
+.main_text {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--text-color);
+  max-width: 108.6rem;
+  margin-left: 28.2rem;
+}
+
+.dot {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid #a9afb3;
+  margin-top: 3.5rem;
+  display: inline-block;
+  margin-top: 10.4rem;
+  margin-bottom: 6.6rem;
+}
+.dot:nth-of-type(1) {
+  background-color: #a9afb3;
+}
+/* image introduce shop */
+.introduce_list {
+  min-width: 53, 4rem;
+  position: relative;
+  display: flex;
+  justify-self: center;
+}
+.image_item_01,
+.image_item_02,
+.image_item_04,
+.image_item_05 {
+  position: relative;
+}
+.image_item_03 {
+  position: absolute;
+  top: 49%;
+  left: 0.1rem;
+}
+/* .image_item_06 {
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
+.image_item {
+  position: relative;
+  overflow: hidden;
+}
+.image_item_07 {
+  position: absolute;
+  bottom: 0;
+}
+.image_item_08 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.mark {
+  background-color: #64c29e;
+  width: 100%;
+  height: 99.5%;
+  align-items: center;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  display: none;
+}
+.image_item_04 > .mark > .icon_shop,
+.image_item_05 > .mark > .icon_shop {
+  margin: 26.7rem auto;
+}
+
+.icon_shop > img {
+  display: block;
+  margin: 10rem auto;
+}
+
+.image_item_02:hover .mark,
+.image_item_03:hover .mark,
+.image_item_01:hover .mark,
+.image_item_04:hover .mark,
+.image_item_05:hover .mark,
+.image_item_06:hover .mark,
+.image_item_07:hover .mark,
+.image_item_08:hover .mark {
+  display: block;
+}
+/* begin discover */
+.discover {
+  height: 20rem;
+  background-color: var(--bg-dark);
+  display: flex;
+  margin-top: -0.38rem;
+  justify-content: center;
+  align-items: center;
+}
+.button-discover {
+  width: 30rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 400;
+}
+.button-discover:hover {
+  background-color: #64c29e;
+  cursor: pointer;
+}
+/* end discover */
+/* begin contact */
+.contact {
+  height: 46.9rem;
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10.8rem;
+}
+.title_contact {
+  font-size: 2.4rem;
+  padding-top: 3.6rem;
+  padding-bottom: 3.3rem;
+  color: var(--text-color);
+}
+input[type="text"],
+select {
+  height: 7rem;
+  width: 40rem;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button-email {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  width: 12.6rem;
+  height: 6.9rem;
+  cursor: pointer;
+  margin-left: 0.9rem;
+}
+.submit_email {
+  padding-bottom: 11rem;
+}
+/* end contact */
+/* begin footer */
+.footer {
+  height: 25rem;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+}
+.newYork {
+  /* width: 24.8rem; */
+  /* margin-left: 16.6rem;
+  margin-top: 2.4rem; */
+  padding-left: 25rem;
+}
+.newYork > h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.newYork > p {
+  font-size: 1.39rem;
+  font-weight: 100;
+  color: var(--text-color);
+}
+.author {
+  display: inherit;
+  /* margin-right: 25.6rem; */
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 32.5rem;
+}
+.author > p {
+  padding-right: 1rem;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+.icon_social_networks > i {
+  margin-left: 1.5rem;
+}
+.icon_social_networks {
+  display: inherit;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.4rem;
+  padding-left: 22.2rem;
+}
+i:nth-child(1) {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  color: white;
+}
+i:nth-child(2) {
+  font-size: 3.5rem;
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #537bbd;
+}
+.icon_social_networks > img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 1.5rem;
+}
+
+.icon_social_networks > i:nth-child(1) {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: white;
+}
+.icon_social_networks > i:nth-child(1):before {
+  display: block;
+  background: #78cdf0;
+  color: white;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+/* end footer */
