@@ -45,7 +45,7 @@ function validate() {
     : (student_address = address) && (errorAddress.innerHTML = "");
   !phoneNumber
     ? (errorPhone.innerHTML = "SĐT không được để trống")
-    : phoneNumber.length < 6 || phone.length > 10
+    : phoneNumber.length < 6 || phoneNumber.length > 10
     ? (errorPhone.innerHTML = "SĐT không được nhỏ hơn 6 và lớn hơn 10")
     : (student_phone = phoneNumber) && (errorPhone.innerHTML = "");
   if (
@@ -108,10 +108,9 @@ function createList() {
       ? Swal.fire({
           icon: "error",
           title: "Mã Sv Đã tồn tại...",
-          text: "Something went wrong!",
         })
       : students.push(student) &&
-        Swal.fire("Success!", "Thêm nhân viên thành công!", "success");
+        Swal.fire("Success!", "Thêm Sinh Viên thành công!", "success");
 
     if (!check_student_Code) {
       document.getElementById("masv").value = "";
@@ -148,14 +147,14 @@ function editList() {
 
 function updateStudent(user_Id) {
   const check_student_Code = students.find(
-    (e) => e.student_code === validate()?.student_code
+    (e, i) =>
+      e.student_code === validate()?.student_code && i !== parseInt(user_Id)
   );
   if (check_student_Code) {
     let el = event.target.parentElement;
     Swal.fire({
       icon: "error",
       title: "Mã Sv Đã tồn tại...",
-      text: "Something went wrong!",
     });
     document.getElementById("masv").value = "";
     document.getElementById("userName").value = "";
